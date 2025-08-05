@@ -9,7 +9,7 @@ def home():
 
 @app.route('/cats')
 def get_cats():
-    conn = sqlite3.connect('pet_database.db')
+    conn = sqlite3.connect('pets_database.db')
     cursor = conn.cursor()
     cursor.execute('SELECT name FROM cats WHERE owner_id = 1')
     cats = cursor.fetchall()
